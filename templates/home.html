@@ -23,17 +23,18 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">FLIGHT PRICE</a>
+                <a class="navbar-brand" href="/">Flight Price Prediction Model</a>
             </div>
         </div>
     </nav>
 
-    <br><br><br>
+    <br>
 
 
     <div class="container">
 
-
+        <h3>{{ prediction_text }}</h3>
+        <br>
 
         <form action="\predict" method="post">
 
@@ -50,11 +51,10 @@
                 </div>
                 <br>
                 <br>
-                <br>
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Arrival Date</h5>
+                            <h5 class="card-title">Return Date</h5>
                             <!-- Arrival -->
                             <input type="datetime-local" name="Arrival_Time" id="Arrival_Time" required="required">
                         </div>
@@ -63,15 +63,13 @@
             </div>
 
             <br>
-            <br>
-            <br>
 
             <div class="row">
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
                             <!-- Source -->
-                            <h5 class="card-title">Source</h5>
+                            <h5 class="card-title">Boarding Location</h5>
                             <select name="Source" id="Source" required="required">
                                 <option value="Delhi">Delhi</option>
                                 <option value="Kolkata">Kolkata</option>
@@ -98,17 +96,13 @@
                 </div>
             </div>
 
-
-
-            <br>
-            <br>
             <br>
 
             <div class="row">
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Stopage</h5>
+                            <h5 class="card-title">Intermediate Stops</h5>
                             <!-- Total Stops -->
                             <select name="stops" required="required">
                                 <option value="0">Non-Stop</option>
@@ -147,18 +141,11 @@
 
 
 
-            <br>
-            <br>
+            
             <br>
             <!-- Submit -->
             <input type="submit" value="Submit" class="btn btn-secondary">
         </form>
-
-        <br>
-        <br>
-        <h3>{{ prediction_text }}</h3>
-
-        <br>
         <br>
         <p>©2022 Shankesh Raju MS</p>
 
